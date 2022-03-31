@@ -62,3 +62,7 @@ Button {
 .border-orange {
   border-color: rgb(241, 228, 192);
 }
+
+.over {
+  overflow: hidden;
+}

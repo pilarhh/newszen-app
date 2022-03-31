@@ -57,11 +57,11 @@ export default function Home() {
                     })}
                 </div>
                 <p className="fs-5 fw-bold mt-5">Category</p>
-                <div className="d-flex">
+                <div className="d-flex over">
                     {categories.map((item) => {
                         return (
-                            <div className={`text-center mt-2 pointer w-20 ${styles.category}`}>
-                                <Image className="rounded-3" src={item.pic} alt="image" width="80px" height="80px" />
+                            <div className={`text-center mt-3 pointer w-20 ${styles.category}`}>
+                                <Image className="rounded-3 category" src={item.pic} alt="image" width="80px" height="80px" />
                                 <p className="rounded-3 fw-bold mt-2 text-brown">{item.cat}</p>
                             </div>
                         )
