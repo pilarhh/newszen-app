@@ -2,3 +2,7 @@
     background: url("../assets/christin-hume-mfB1B1s4sMc-unsplash\ 1.svg") no-repeat;
     height: 100vh;
 }
+
+.btn-read:hover {
+    background-color: aqua;
+} 

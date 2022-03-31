@@ -3,3 +3,6 @@
   height: 90vh;
 }
 
+.category:hover {
+  transform: scale(1.2);
+}
