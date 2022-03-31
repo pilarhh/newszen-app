@@ -37,7 +37,7 @@ export default function Home() {
         <>
             <Navbar></Navbar>
             <header className={`${styles.headerPic} p-5`}>
-                <div className="p-5">
+                <div className="p-5 text-white">
                     <p className='fs-1 fw-bold lh-sm font-header'>Share Information <br></br> and Educate People</p>
                     <p className="mt-3 font-header">Everyone has their point of view of something, but just <br></br>
                         don’t be afraid to express the facts. Be an author and <br></br>
@@ -123,7 +123,7 @@ export default function Home() {
                         )
                     })};
                 </div>
-                <p className="text-secondary text-center">no article left</p>
+                <p className="text-secondary text-center">No article left</p>
             </main>
             <Footer></Footer>
 

@@ -1,8 +1,11 @@
 .headerPic {
-    background: url("../assets/christin-hume-mfB1B1s4sMc-unsplash\ 1.svg") no-repeat;
-    height: 100vh;
+    background: url("../assets/laptop_book_aesthetics_214147_1400x1050.jpg") no-repeat;
+    height: 90vh;
+    width: 1400px;
 }
 
-.btn-read:hover {
-    background-color: aqua;
-} 
+.comment {
+    width: 1000px;
+    outline: none;
+    height: 100px;
+}

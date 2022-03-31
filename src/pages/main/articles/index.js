@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import thumb from "../../../assets/hand-thumbs-up.svg";
 import clock from "../../../assets/clock.svg";
 
-export default function Home() {
+export default function Articles() {
     const router = useRouter();
 
     return (
@@ -27,10 +27,11 @@ export default function Home() {
                     </Button>
                 </div>
             </header>
-            <main className="mx-5">
+            <main className="mx-5 mt-5">
                 {articles.map((item) => {
                     return (
-                        <div className="bg-orange d-flex justify-content-between mb-4 w-100 p-2 rounded-3 shadow">
+                        <>
+                        <div className="d-flex justify-content-between my-4 w-100 p-2 rounded-3">
                             <div className="d-flex w-50">
                                 <Image className="rounded-3" src={item.imageArticle} alt="image"  />
                                 <div className="ms-3 d-flex flex-column justify-content-between">
@@ -44,10 +45,12 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <Button className="h-25 rounded-3 btn-brown btn-read p-3 shadow-sm me-5 mt-5 w-20 text-white" onClick={() => router.push(`/main/articles/${item.id}`)}>
+                            <Button className="h-25 rounded-3 btn-brown btn-read p-3 shadow me-5 mt-5 w-20 text-white" onClick={() => router.push(`/main/articles/${item.id}`)}>
                                 Read Now
                             </Button>
                         </div>
+                            <div className="border-bottom"></div>
+                        </>
                     )
                 })};
             </main>
