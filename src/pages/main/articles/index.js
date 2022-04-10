@@ -22,7 +22,7 @@ export default function Articles() {
                     <p className="mt-3 font-header">You can be an author by being active in reading articles <br></br>
                         in a month or you can request to be an author if you <br></br>
                         have been a member for three months..</p>
-                    <Button className="mt-4 rounded-3 btn-orange p-2 w-20 font-header" onClick={() => router.push("")}>
+                    <Button className="mt-2 rounded-2 btn-orange p-2 w-20 font-header" onClick={() => router.push("/main/postArticle")}>
                         Start Writing
                     </Button>
                 </div>
@@ -45,7 +45,7 @@ export default function Articles() {
                                     </div>
                                 </div>
                             </div>
-                            <Button className="h-25 rounded-3 btn-brown btn-read p-3 shadow me-5 mt-5 w-20 text-white" onClick={() => router.push(`/main/articles/${item.id}`)}>
+                            <Button className="h-25 rounded-3 btn-brown btn-read p-3 shadow me-5 mt-5 w-20 text-white" onClick={() => router.push(`/main/articleDetail/${item.id}`)}>
                                 Read Now
                             </Button>
                         </div>

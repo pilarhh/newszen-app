@@ -19,7 +19,7 @@ export default function Navbar() {
                 </div>
                 <div className="">
                     <Button className='btn p-2 w-10'>Sign up</Button>
-                    <Button className='bg-orange p-2 rounded-3 w-10' onClick={()=>{router.push("/auth/login")}}>Login</Button>
+                    <Button className='bg-orange p-2 rounded-2 w-10' onClick={()=>{router.push("/auth/login")}}>Login</Button>
                 </div>
             </div>
         </>

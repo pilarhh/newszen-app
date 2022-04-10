@@ -14,8 +14,8 @@ Button {
 }
 
 .font-header {
-  font-family: 'Playfair Display', serif!important;
-    /* font-size: large; */
+  /* font-family: 'Playfair Display', serif!important; */
+    font-size: large;
 }
 
 .bg-brown, .btn-brown {
@@ -59,10 +59,14 @@ Button {
   color: rgb(241, 228, 192);
 }
 
-.border-orange {
-  border-color: rgb(241, 228, 192);
+.border-warning {
+  border-color: rgb(241, 228, 192)!important;
 }
 
 .over {
   overflow: hidden;
+}
+
+.rounded-3 {
+  border-radius: 20px!important;
 }

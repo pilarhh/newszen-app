@@ -42,7 +42,7 @@ export default function Home() {
                     <p className="mt-3 font-header">Everyone has their point of view of something, but just <br></br>
                         don’t be afraid to express the facts. Be an author and <br></br>
                         share you prespective of something to the world.</p>
-                    <Button className="mt-4 rounded-3 btn-orange p-2 w-20 font-header" onClick={() => router.push("/main/articles")}>
+                    <Button className="mt-2 rounded-2 btn-orange p-2 w-20 font-header" onClick={() => router.push("/main/articles")}>
                         Start Exploring!
                     </Button>
                 </div>
@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="d-flex">
                     {tags.map((item) => {
                         return (
-                            <div className="pointer btn-orange w-10 rounded-3 shadow-sm p-1 me-3 text-center">#{item.tag}</div>
+                            <div className="pointer btn-orange w-10 rounded-3 shadow-sm p-1 me-3 text-center mb-2">#{item.tag}</div>
                         )
                     })}
                 </div>
@@ -61,7 +61,7 @@ export default function Home() {
                     {categories.map((item) => {
                         return (
                             <div className={`text-center mt-3 pointer w-20 ${styles.category}`}>
-                                <Image className="rounded-3 category" src={item.pic} alt="image" width="80px" height="80px" />
+                                <Image className="rounded-2 category" src={item.pic} alt="image" width="80px" height="80px" />
                                 <p className="rounded-3 fw-bold mt-2 text-brown">{item.cat}</p>
                             </div>
                         )
@@ -72,7 +72,7 @@ export default function Home() {
                     {articles.map((item) => {
                         if (item.id === 4 || item.id === 5 || item.id === 6)
                             return (
-                                <div className="container bg-orange col mb-4 w-30 p-2 rounded-3 pointer shadow" onClick={() => router.push(`/main/articles/${item.id}`)}>
+                                <div className="container bg-orange col mb-4 w-30 p-2 rounded-3 pointer shadow" onClick={() => router.push(`/main/articleDetail/${item.id}`)}>
                                     {/* <Image className="rounded-3" src={item.imageArticle} alt="image" width="500px" height="300px" /> */}
                                     <div className="ms-3 d-flex flex-column justify-content-between mt-2">
                                         <p className="fs-6 fw-bold">{item.title}</p>
@@ -95,7 +95,7 @@ export default function Home() {
                         <p className='fs-2 fw-bold lh-sm font-header'>Will Smith slaps and swears at <br></br>
                             Chris Rock on stage at the Oscars</p>
                         <p className="mt-3 font-header">Will Smith appeared to slap presenter Chris Rock for joking about his wife, Jada Pinkett Smith, at the Oscars.</p>
-                        <Button className="mt-4 rounded-3 bg-orange p-2 w-20 font-header" onClick={() => router.push('/main/articles')}>
+                        <Button className="mt-2 rounded-2 bg-orange p-2 w-20 font-header" onClick={() => router.push('/main/articles')}>
                             Read Now
                         </Button>
                     </div>
@@ -107,7 +107,7 @@ export default function Home() {
                 <div className="d-flex row row-cols-2">
                     {articles.map((item) => {
                         return (
-                            <div className="container bg-orange col mb-4 w-30 p-2 rounded-3 pointer shadow" onClick={() => router.push(`/main/articles/${item.id}`)}>
+                            <div className="container bg-orange col mb-4 w-30 p-2 rounded-3 pointer shadow" onClick={() => router.push(`/main/articleDetail/${item.id}`)}>
                                 <Image className="rounded-3" src={item.imageArticle} alt="image" width="500px" height="300px" />
                                 <div className="ms-3 d-flex flex-column justify-content-between">
                                     <p className="fs-6 fw-bold">{item.title}</p>

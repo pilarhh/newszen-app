@@ -11,10 +11,8 @@ import { useRouter } from "next/router";
 import back from "../../../assets/chevron-left.svg";
 import share from "../../../assets/send.svg";
 import thumb from "../../../assets/hand-thumbs-up.svg";
-import authorPic from "../../../assets/depositphotos_121232092-stock-illustration-male-default-avatar-profile-gray.jpg";
 
-
-export default function Detail() {
+export default function ArticleDetail() {
     const router = useRouter();
     const id = router.query.id
 
@@ -23,9 +21,9 @@ export default function Detail() {
             <Navbar></Navbar>
             <main className="container mt-5 mb-5">
                 <div className="d-flex justify-content-between">
-                    <div className="pointer d-flex" onClick={() => router.push("/main/articles")}>
-                        <Image className="mt-" src={back} alt='' height={25} width={25}></Image>
-                        <p className="ms-3 mt-3 fw-bold">Back</p>
+                    <div className="pointer d-flex" onClick={() => router.back()}>
+                        <Image className="mt-1" src={back} alt='' height={30} width={30}></Image>
+                        <p className="ms-3 mt-4 fw-bold">Back</p>
                     </div>
                     <p className="fw-bold mt-3 fs-5">Article Viewer</p>
                     <Image className="" src={share} alt='' height={25} width={25}></Image>
@@ -34,7 +32,7 @@ export default function Detail() {
                     if (item.id == id)
                         return (
                             <div className="mt-5">
-                                <Image src={item.imageArticle} alt='' ></Image>
+                                <Image className="rounded-2" src={item.imageArticle} alt='' ></Image>
                                 <div className="d-flex mt-3 justify-content-between">
                                     <div className="d-flex">
                                         <Image className="rounded-3" src={item.authorPicture} alt="" height={60} width={60}></Image>
@@ -58,8 +56,8 @@ export default function Detail() {
                     {/* <Image className="rounded-3" src={authorPic} alt="" height='10vh' width={50}></Image> */}
                     <div className="d-flex flex-column ms-">
                         <p className="mb-0 fw-bold">You</p>
-                        <Input className={`${styles.comment} border-orange p-3 rounded-3`} placeholder="Leave a comment"></Input>
-                        <Button className="rounded-3 btn-orange p-2 shadow w-10 mt-2" onClick={() => router.push(`/main/articles/${item.id}`)}>
+                        <Input className={`${styles.comment} border border-warning p-3 rounded-3`} placeholder="Leave a comment"></Input>
+                        <Button className="rounded-2 btn-orange p-2 w-10 mt-2" onClick={() => router.push(`/main/articles/${item.id}`)}>
                             Submit
                         </Button>
                     </div>
